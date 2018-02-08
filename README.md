@@ -1,6 +1,6 @@
 # EVENTBRITE-like
 
-Check l'application correspondante au projet: [Eventbrite](https://quiet-coast-33347.herokuapp.com/)(the fake).
+Check l'application correspondante au projet: [EVENTBRITE.HEROKUAPP.COM](https://morning-sea-52652.herokuapp.com/)(the fake).
 
 ## 1. Models, signup, sign-in
 
