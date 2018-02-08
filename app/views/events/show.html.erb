@@ -1,0 +1,13 @@
+<h1><%= @event.name %></h1>
+
+<p><%= @event.name%> will take place at <%= @event.address %> on <%= @event.date %></p>
+<p><%= @event.description %></p>
+<% if current_user.id == @event.creator.id %>
+	<%= link_to "Invite People", invite_path(id: @event.id) %>
+<% end %>
+<h2>Attendees</h2>
+<ol>
+	<% @event.attendees.each do |attendee| %>
+		<li><%= link_to "#{attendee.name}", user_path(attendee) %></li>
+	<% end %>
+</ol>

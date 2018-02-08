@@ -1,0 +1,85 @@
+@import "bootstrap";
+
+body {
+	background-color: #fff;
+}
+
+header, footer {
+	background-color: #373737;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1;
+}
+
+h1 {
+	font-size: 3em;
+	letter-spacing: -2px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.2em;
+	letter-spacing: -1px;
+	text-align: center;
+	font-weight: normal;
+}
+
+p {
+	font-size: 1.1em;
+	line-height: 1.7em;
+}
+
+a {
+	color: #fff;
+}
+
+/* Styling of the 'Members Only' upperright logo */
+
+#logo {
+	font-size: 1.7em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+	&:hover {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+/* styling for the centering of the signup button */
+.centered {
+	text-align: center;
+}
+
+/* Styling of the user posts */
+
+ul {
+	padding: 0;
+}
+
+.posts li {
+  border-radius: 5px;
+  border: 1px solid #D0D0D0;
+  color: #fff;
+  padding: 1vh;
+  margin-bottom: 1vh;
+  list-style: none;
+  h4, h5, p {
+    text-align: center;
+    color: #000;
+  }
+}
+
+.posts {
+	margin-bottom: 120px;
+}
+
+label {
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+}

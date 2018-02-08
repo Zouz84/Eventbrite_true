@@ -1,0 +1,14 @@
+<h1>Welcome to the Private Events</h1>
+
+<h2>Sign in</h2>
+
+<%= form_for(:session, url: signin_path) do |t| %>
+	<%= t.label :name %>
+	<%= t.text_field :name %>
+
+	<%= t.label :password %>
+	<%= t.password_field :password %>
+
+	<%= t.submit "Sign in" %>
+<% end %>
+<p>Not a user yet? <%= link_to "Sign up!", signup_path %></p>

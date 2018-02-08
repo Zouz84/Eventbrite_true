@@ -1,0 +1,26 @@
+<h1><%= @user.name %></h1>
+
+<h2>Created Events</h2>
+
+<ol>
+	<% @user.events.each do |event| %>
+		<li><%= link_to "#{event.name}", event_path(event) %>: at <%= event.address %> on <%= event.date %><%= link_to "Invite People", invite_path(id: event.id) %></li>
+	<% end %>
+</ol>
+
+<h2>Previously Attended Events</h2>
+
+<ol>
+	<% @previous_events.each do |attended_event| %>
+		<li><%= link_to "#{attended_event.name}", event_path(attended_event) %></li>
+	<% end %>
+</ol>
+
+
+<h2>Upcoming Events</h2>
+
+<ol>
+	<% @upcoming_events.each do |attended_event| %>
+		<li><%= link_to "#{attended_event.name}", event_path(attended_event) %></li>
+	<% end %>
+</ol>

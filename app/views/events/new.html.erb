@@ -1,0 +1,17 @@
+<h1>Create an Event</h1>
+
+<%= form_for(:event, url: events_path) do |t| %>
+	<%= t.label :name %>
+	<%= t.text_field :name %>
+
+	<%= t.label :description %>
+	<%= t.text_area :description %>
+
+	<%= t.label :address %>
+	<%= t.text_field :address %>
+
+	<%= t.label :date %>
+	<%= t.text_field :date, placeholder: "YYYY/MM/DD" %>
+
+	<%= t.submit "Create" %>
+<% end %>

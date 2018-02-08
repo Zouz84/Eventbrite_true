@@ -1,0 +1,47 @@
+<h1>Events</h1>
+
+<h2>Past</h2>
+<table>
+	<tr>
+		<th>Event Name</th>
+		<th>Created by</th>
+		<th>Address</th>
+		<th>Time</th>
+		<th>Description</th>
+	</tr>
+	<% @past_events.each do |event| %>
+		<tr>
+			<td><%= link_to "#{event.name}", event_path(event) %></td>
+			<td><%= link_to "#{event.creator.name}", user_path(event.creator.id) %></td>
+			<td><%= event.address %></td>
+			<td><%= Time.parse(event.date) %></td>
+			<td><%= event.description %></td>
+			<% if current_user.id == event.creator.id %>
+				<td><%= link_to "Invite People", invite_path(id: event.id) %></td>
+			<% end %>
+		</tr>
+	<% end %>
+</table>
+
+<h2>Upcoming</h2>
+<table>
+	<tr>
+		<th>Event Name</th>
+		<th>Created by</th>
+		<th>Address</th>
+		<th>Time</th>
+		<th>Description</th>
+	</tr>
+	<% @future_events.each do |event| %>
+		<tr>
+			<td><%= link_to "#{event.name}", event_path(event) %></td>
+			<td><%= link_to "#{event.creator.name}", user_path(event.creator.id) %></td>
+			<td><%= event.address %></td>
+			<td><%= Time.parse(event.date) %></td>
+			<td><%= event.description %></td>
+			<% if current_user.id == event.creator.id %>
+				<td><%= link_to "Invite People", invite_path(id: event.id) %></td>
+			<% end %>
+		</tr>
+	<% end %>
+</table>

@@ -1,0 +1,13 @@
+<h1>Invite People</h1>
+
+<%= form_for(:invitation) do |f| %>
+
+	<%= f.text_field :attended_event_id, type: "hidden", value: params[:id] %>
+
+	<%= f.label :attendee_id, "User Name: " %>
+	<%= f.text_field :attendee_id %>
+
+	<%= f.submit "Invite" %>
+<% end %>
+<%= link_to "Back to event", event_path(params[:id]) %>
+
